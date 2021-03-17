@@ -8,12 +8,6 @@ let counterErrors = new Counter('COUNTerrors');
 export const options = {
     vus: 1,
     iterations: 5,
-    /*duration: '10s',
-    stages: [
-    { duration: "1m", target: 10 },
-    { duration: "3m", target: 10 },
-    { duration: "1m", target: 0 },
-  ],*/
 };
 
 export default function() {
