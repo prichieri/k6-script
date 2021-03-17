@@ -6,8 +6,14 @@ import { check } from 'k6';
 let counterErrors = new Counter('COUNTerrors');
 
 export const options = {
-    vus: 1,
-    iterations: 5,
+    scenarios: {
+        contacts: {
+            executor: 'per-vu-iterations',
+            vus: 1,
+            iterations: 1,
+            maxDuration: '1h30m',
+        },
+    },
 };
 
 export default function() {
