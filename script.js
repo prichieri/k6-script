@@ -7,8 +7,8 @@ let counterErrors = new Counter('COUNTerrors');
 
 export let options = {
     thresholds: {
-        http_req_duration: ['p(95)<214'],
-        http_reqs: ["rate>1340000"]
+        http_req_duration: ['p(95)<2140'],
+        http_reqs: ["rate>134"]
     },
 };
 
