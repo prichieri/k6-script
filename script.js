@@ -5,10 +5,11 @@ import { check } from 'k6';
 
 let counterErrors = new Counter('COUNTerrors');
 
-export const options = {
-    http_req_duration: ['p(95)<214'],
-    http_reqs: ["rate>1340000"]
-    
+export let options = {
+    thresholds: {
+        http_req_duration: ['p(95)<214'],
+        http_reqs: ["rate>1340000"]
+    },
 };
 
 export default function() {
